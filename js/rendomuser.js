@@ -17,7 +17,9 @@ const displayUser = (user) => {
   document.getElementById("name").innerHTML = name;
 
   const location =
-    user.results[0].location.city + " " + user.results[0].location.state;
+    user.results[0].location.city + 
+    " " + 
+    user.results[0].location.state;
   document.getElementById("location").innerHTML = location;
 
   const picture =
@@ -27,7 +29,10 @@ const displayUser = (user) => {
     " " +
     user.results[0].picture.thumbnail;
   document.getElementById("picture").innerHTML = picture;
-  console.log(user.results[0].picture);
+
+  const email =document.getElementById('email');
+  email.innerHTML = user.results[0].email
+  console.log(user.results[0]);
 };
 
 // const displayUser = user => {
